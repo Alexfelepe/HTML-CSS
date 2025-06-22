@@ -1,0 +1,38 @@
+body{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+li{
+    width: 200px;
+    height: 200px;
+    background-color: aqua;
+    border: solid;
+    text-align: center;
+    display: inline-block;
+}
+a{
+    color: rgb(5, 92, 92);
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    background-color: black;
+    width: 200px;
+    
+}
+a:visited{
+    color: chocolate;
+}
+
+li:hover{
+    text-decoration: underline;
+    background-color: rgb(59, 59, 59);
+}
+
+a:active{
+    color: firebrick;
+}
+a::after{
+    content: '[link]';
+    color: rgb(255, 255, 255);
+}

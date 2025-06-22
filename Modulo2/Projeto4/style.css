@@ -1,0 +1,25 @@
+body{
+    background-color: rgb(4, 131, 88);
+    font-family: 'Courier New', Courier, monospace
+    ;
+}
+
+h1{
+    color: blue;
+
+}
+
+h2{
+    color: blueviolet;
+}
+h1#titulo{
+    color: rgb(255, 255, 255);
+    background-color: blue;
+    text-align: center;
+}
+.aprendendo{
+    color: rgb(0, 255, 255);
+}
+.legal{
+    color: rgb(3, 59, 105);
+}

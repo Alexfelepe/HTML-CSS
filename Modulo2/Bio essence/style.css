@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Belanosima:wght@400;600;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+.titulo{
+    font-family: "Belanosima";
+    background-color: #79b990b6;
+    border-radius: 100%;
+    width: 250px;
+    margin: auto;
+}
+.textdepoimento{
+    margin-top: auto;
+    text-align: center;
+    margin: 10px;
+}
+body{
+background-image: url(imagens/Imagem\ do\ WhatsApp\ de\ 2025-02-14\ à\(s\)\ 16.18.29_5fbb1074.jpg); 
+background-attachment: fixed;
+background-position: center;
+background-size: cover;
+margin: 10px 2px;
+text-align: center;
+width: auto;
+border-radius: 30px;
+/* cobeça do site (CSS INDEX) */
+}
+.logo{
+    background-color: #79b990b6;
+    border-radius: 50%;
+}
+header{
+margin: auto;
+padding-right: 10px;
+margin: 10px;
+box-shadow: 10px #000000;
+border-radius: 10px;
+}
+.carrossel2{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1,2rem;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    margin: 10px
+}
+    
+.janelas {
+    width: 0px;
+    height: auto;
+
+
+}
+.janelas:first-child{
+    width: 385px;
+}
+    
+nav{
+    font-family: "Belanosima";
+    margin:auto;
+}
+.navegacao:hover {
+    background-color: #ffffff;
+    color: rgb(255, 0, 0);
+    display: grid;
+    width: 100px;
+    height: auto;
+    border-radius: 25%;
+}
+.navegacao{
+    margin-right:30px ;
+}
+.direcional{
+    background-color: #57a773a2;
+    padding: 2px;
+    text-align: center;
+    border-radius: 10px;
+    margin: auto;
+}
+a{
+    color: #ffffff;
+}
+
+.conteudo{
+    text-align: center;
+}
+.textdepoimento{
+    padding: 10px;
+    font-family: ;
+    color: rgb(0, 0, 0);
+}
+.servicos{
+    padding: 10px;
+    display: inline-block;
+    width: 270px;
+    height: 490px;
+    background-color: rgb(1, 15, 27);
+    box-shadow: 3px 3px 3px rgb(223, 216, 216);
+    margin: 10px 10px;
+    border-radius: 5px;
+}
+.janelas{
+    background-color: rgb(69, 161, 69)#e20000;
+    width: 100;
+    display: flex;
+    /* Meio do site */
+}
+.meio1{
+    background-color:#9c9c9c;
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+.meio2{
+    background-color:#9c9c9c;
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+.card2{
+        text-align: center;
+        background-color: #79b990b6;
+        padding: 10px;
+        margin: auto;
+        min-height: 480px;
+        min-width: 400px;
+        border-radius: 10px ;
+        text-align: center;
+        scroll-snap-align: center;
+        border-radius: 10px;
+        grid-auto-flow: none;
+        border: dashed #ffffffaf;
+    }
+
+.noticia{
+    display: table-column;
+    border: solid red;
+
+}
+.noticia2{
+    margin-bottom: 30px;
+    margin-top: 30px;
+
+}
+.noticia3{
+    border-radius: 10px;
+    background-color: #79b990b6;
+    width: 1300px;
+    height: auto;
+    box-shadow: #000000 3px 3px 3px;
+    margin-bottom: 2px;
+
+}
+.depoimentos{
+    padding: 10px;
+    display: inline-block;
+    width: 300px;
+    height: px;
+    background-color: rgb(179, 179, 179);
+    box-shadow: 3px 3px 3px black;
+    margin: 10px 10px;
+    border-radius: 5px;
+    margin: 10px 10px;
+}
+/* Footer do site */
+.footer{
+    display: inline-flex;
+    color: aliceblue;
+    height: 480px;
+    width: 1300px;
+    text-align: initial;
+    border-radius: 10px;
+     padding:50px;
+}
+.local{
+    text-align: left;
+    width: 350px;
+    background-color: rgb(189, 176, 176);
+    padding: 10px;
+    border:  solid, rgb(171, 200, 255) 2px;
+    border-radius: 30px;
+    box-shadow: #300606 2px 2px 2px;
+    height: 275px;
+
+}
+.parceiros{
+    text-align: right;
+    display: flex;
+    border: unset black 10px;
+    background-color: #03f5fd8f;
+    border-radius: 10px;
+    width: 925px;
+    height: 100px;
+    margin-left: 800p;
+    margin-top: 30px;
+}
+.vl{
+    border-left: 6px solid green;
+    height: 100px;
+    position:relative
+    left: 50%;
+    margin-left: 50px;
+    top: 0;
+}
+.redes-social{
+    width: 400px;
+    margin-left: -50px;
+    display: inline-block;
+}
+.insta{
+    background-color: #e20000;
+    width: auto;
+
+}
+
+/* (CSS da empresa) */
+.meio1-empresa{
+    background-color:#c0c0c0;
+    margin: 10px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    display: 
+}
+.container .row {
+    display: flex; /* Ativa o Flexbox */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    gap: 20px; /* Espaço entre o texto e a imagem */}
+.col {
+    flex: 1}
+.container2 .row2 {
+        display: flex; /* Ativa o Flexbox */
+        flex-direction: row-reverse; /* Inverte a ordem dos elementos */
+        align-items: center; /* Alinha os itens verticalmente ao centro */
+        gap: 20px;}
+
+.historia-fora{
+    align-content: flex-start;
+}
+.hitoria-dentro{
+    display: inline;
+
+    }
+.historia-empresa{
+    width: 500px;
+    height: auto;
+}
+.img-historia {
+    max-width: 30%; /* Garante que a imagem não ultrapasse o tamanho do container */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Adiciona bordas arredondadas (opcional) */
+}
+/* Pagina: contatos */
+
+.meio-contatos{
+    width: auto;
+    height: 400px;
+}

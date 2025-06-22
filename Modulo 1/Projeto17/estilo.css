@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/* GOOGLE FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* VARIABLES CSS */
+:root {
+  /* ---------------- Colors ---------------- */
+  /* Color mode HSL(hue, saturation, lightness) */
+  --first-color: hsl(249, 54%, 57%);
+  --second-color: hsl(249, 50%, 47%);
+  --title-color: hsl(244, 14%, 12%);
+  --text-color: hsl(244, 20%, 35%);
+  --body-color: hsl(0, 0%, 98%);
+
+  /* ---------------- Font and Typography ---------------- */
+  --body-font: 'Poppins', sans-serif;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.875rem;
+  --smaller-font-size: 0.75rem;
+
+  --font-medium: 500;
+  --font-semi-bold: 600;
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    --h2-font-size: 1.75rem;
+    --normal-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+
+/* ---------------- BASE ---------------- */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--body-color);
+  font-family: var(--body-font);
+  color: var(--text-color);
+}
+
+input,
+button {
+  font-family: var(--body-font);
+  border: none;
+  outline: none;
+}
+ con

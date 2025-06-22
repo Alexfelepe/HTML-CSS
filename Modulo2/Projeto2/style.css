@@ -1,0 +1,24 @@
+
+body{
+    background-image: linear-gradient(to left, rgb(255, 128, 128), rgb(130, 130, 250), rgb(138, 250, 138));}
+
+    p {
+    text-align: justify;
+    color: aliceblue;
+}
+
+main {
+    background-color: rgb(1, 24, 44);
+    border-radius: 30px;
+    width: 700px;
+    margin: auto;
+    padding: 10px;
+    box-shadow: 2px 2px 2px black;
+}
+h1{
+    color:rgb(139, 63, 63) ;
+    text-align: center;
+}
+h2{
+    color: aqua;
+}
