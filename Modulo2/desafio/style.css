@@ -133,6 +133,7 @@ div.video > .iframe{
     justify-content: space-evenly;
     padding-bottom: 10px;
     text-decoration: none;
+    margin: auto;
 }
 li{
     list-style: inside;
