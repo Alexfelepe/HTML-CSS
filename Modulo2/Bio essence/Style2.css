@@ -1,39 +1,24 @@
-@media (max-width: 1300px) {
-    .card {
-        width: 250px; /* Reduz a largura dos cards em telas menores */
-    }
-}
-
-@media (max-width: 480px) {
-    .card {
-        width: 200px; /* Ajuste adicional para telas muito pequenas */
-    }
-}
 .container {
     width: 100%;
-    max-width: 1280px; /* Ajuste conforme necessário */
+    max-width: 1280px;
     margin: 0 auto;
     padding: 20px;
-    overflow: none;
+    overflow: hidden; /* Esconde conteúdo extra */
 }
 
 .carrossel {
-    width: 1280px;
-    display: grid;
-    grid-auto-flow: column;
-    gap: 1.2rem; /* Espaçamento entre os cards */
+    width: 100%;
+    display: flex; /* Troquei grid por flex */
     overflow-x: auto;
-    overscroll-behavior-x: contain;
     scroll-snap-type: x mandatory;
-    scroll-behavior: smooth; /* Rolagem suave */
-    margin: 10px;
-    overflow: hidden;
+    scroll-behavior: smooth;
+    gap: 0; /* Removi o gap entre os cards */
 }
 
 .card {
-    scroll-snap-align: start; /* Encaixe o card no início ao rolar */
-    width: 1280px; /* Largura fixa para os cards */
-    flex-shrink: 0; /* Impede que os cards encolham */
+    scroll-snap-align: start;
+    width: 100%; /* Ocupa 100% do container */
+    flex: 0 0 100%; /* Não cresce, não encolhe, largura fixa de 100% */
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -43,12 +28,9 @@
     width: 100%;
     height: auto;
     display: block;
-    overflow: hidden;
 }
 
-/* Estilização adicional para os links */
-.banner {
-    display: block;
-    text-decoration: none;
-    color: inherit;
+/* Esconde a barra de rolagem */
+.carrossel::-webkit-scrollbar {
+    display: none;
 }
