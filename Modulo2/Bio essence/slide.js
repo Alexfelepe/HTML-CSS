@@ -1,47 +1,113 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const carrossel = document.querySelector('.carrossel');
-    const cards = document.querySelectorAll('.card');
-    const totalCards = cards.length;
-
+    const carousel = document.querySelector('.carousel');
+    const cards = document.querySelectorAll('.carousel-card');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    const dotsContainer = document.querySelector('.carousel-dots');
+    
     let currentIndex = 0;
     let autoScrollInterval;
-    let isUserScrolling = false;
-
-    function scrollToNextCard() {
-        if (isUserScrolling || totalCards <= 1) return;
-
-        currentIndex = (currentIndex + 1) % totalCards;
-        carrossel.scrollTo({
-            left: currentIndex * carrossel.offsetWidth, // Rolagem pela largura total do carrossel
-            behavior: 'smooth'
+    let isUserInteracting = false;
+    
+    // Criar dots de navegação
+    cards.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(index));
+        dotsContainer.appendChild(dot);
+    });
+    
+    const dots = document.querySelectorAll('.dot');
+    
+    // Função para atualizar o carrossel
+    function updateCarousel() {
+        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        
+        // Atualizar dots
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
         });
     }
-
-    function startAutoScroll() {
-        autoScrollInterval = setInterval(scrollToNextCard, 3000);
+    
+    // Navegação
+    function goToSlide(index) {
+        currentIndex = index;
+        updateCarousel();
+        resetAutoScroll();
     }
-
-    // Pausa ao interagir
-    carrossel.addEventListener('mousedown', () => {
-        isUserScrolling = true;
+    
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % cards.length;
+        updateCarousel();
+    }
+    
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+        updateCarousel();
+    }
+    
+    // Controles de navegação
+    nextBtn.addEventListener('click', () => {
+        nextSlide();
+        resetAutoScroll();
+    });
+    
+    prevBtn.addEventListener('click', () => {
+        prevSlide();
+        resetAutoScroll();
+    });
+    
+    // Controle de rolagem automática
+    function startAutoScroll() {
+        autoScrollInterval = setInterval(nextSlide, 5000);
+    }
+    
+    function resetAutoScroll() {
+        clearInterval(autoScrollInterval);
+        if (!isUserInteracting) {
+            startAutoScroll();
+        }
+    }
+    
+    // Interação do usuário
+    carousel.addEventListener('mouseenter', () => {
+        isUserInteracting = true;
         clearInterval(autoScrollInterval);
     });
-
-    carrossel.addEventListener('touchstart', () => {
-        isUserScrolling = true;
+    
+    carousel.addEventListener('mouseleave', () => {
+        isUserInteracting = false;
+        startAutoScroll();
+    });
+    
+    // Touch events para mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    carousel.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+        isUserInteracting = true;
         clearInterval(autoScrollInterval);
-    });
-
-    // Retoma após interação
-    carrossel.addEventListener('mouseup', () => {
-        isUserScrolling = false;
+    }, {passive: true});
+    
+    carousel.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+        isUserInteracting = false;
         startAutoScroll();
-    });
-
-    carrossel.addEventListener('touchend', () => {
-        isUserScrolling = false;
-        startAutoScroll();
-    });
-
+    }, {passive: true});
+    
+    function handleSwipe() {
+        const threshold = 50;
+        if (touchEndX < touchStartX - threshold) {
+            nextSlide();
+        } else if (touchEndX > touchStartX + threshold) {
+            prevSlide();
+        }
+    }
+    
+    // Iniciar
+    updateCarousel();
     startAutoScroll();
 });

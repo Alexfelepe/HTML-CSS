@@ -168,14 +168,14 @@ a{
     display: inline-flex;
     color: aliceblue;
     height: 480px;
-    width: 1300px;
+    width: auto;
     text-align: initial;
     border-radius: 10px;
      padding:50px;
 }
 .local{
     text-align: left;
-    width: 350px;
+    width: auto;
     background-color: rgb(189, 176, 176);
     padding: 10px;
     border:  solid, rgb(171, 200, 255) 2px;
@@ -190,7 +190,7 @@ a{
     border: unset black 10px;
     background-color: #03f5fd8f;
     border-radius: 10px;
-    width: 925px;
+    width: auto;
     height: 100px;
     margin-left: 800p;
     margin-top: 30px;
